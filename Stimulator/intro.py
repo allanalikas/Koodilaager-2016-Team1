@@ -20,7 +20,7 @@ def on_event(event):
 def update():
     pass
 
-def draw(screen):
+def draw(screen, cam_position):
     global fade
     global fadeIn
     global intropic, musicneed

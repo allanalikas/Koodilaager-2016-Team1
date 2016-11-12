@@ -27,18 +27,21 @@ if __name__ == '__main__':
     clock = pygame.time.Clock()
     ms = clock.tick(fps)
 
-    switch_state('ingame')
+    switch_state('intro')
 
     while True:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                quit_game()
-            else:
-                current_state.on_event(event)
+        try:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    quit_game()
+                else:
+                    current_state.on_event(event)
 
-        current_state.update()
-        current_state.draw(screen, cam_position)
+            current_state.update()
+            current_state.draw(screen, cam_position)
 
-        pygame.display.flip()
+            pygame.display.flip()
 
-        ms = clock.tick(fps)
+            ms = clock.tick(fps)
+        except State_switcher as e:
+            switch_state(e.value)
