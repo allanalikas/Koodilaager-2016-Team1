@@ -34,7 +34,7 @@ class Player(Character):
 
            elif event.key == pygame.K_RIGHT or event.key == pygame.K_d:
                self.icon = (self.player_icon_right)
-               self.x_speed = +5
+               self.x_speed = 5
 
         elif event.type == pygame.KEYUP:
             if event.key == pygame.K_UP or event.key == pygame.K_w:
