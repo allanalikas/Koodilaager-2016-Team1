@@ -53,6 +53,11 @@ def read_map(map_data):
             elif letter == 'A':
                 map_list[row].append(9)
 
+            elif letter == '3':
+                map_list[row].append(10)
+
+            elif letter == '1':
+                map_list[row].append(11)
 
 
         row += 1
@@ -136,3 +141,9 @@ def draw(s, cam_pos):
 
             elif i == 9:
                 pygame.draw.rect(s, [100, 100, 100], rect)
+
+            elif i == 10:
+                pygame.draw.rect(s, [195, 5, 248], rect)
+
+            elif i == 11:
+                pygame.draw.rect(s, [229, 174, 134], rect)

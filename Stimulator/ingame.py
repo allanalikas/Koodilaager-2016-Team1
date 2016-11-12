@@ -11,7 +11,7 @@ def init():
     global player_obj, player_icon, enemy_icon, enemy_obj
     enemy_icon = pygame.image.load("Kera.png")
     player_icon = pygame.image.load("player.png")
-    player_obj = player.Player(100, 200)
+    player_obj = player.Player(100, 650)
     enemy_obj = enemy.Enemy(300, 300, enemy_icon)
     gamemusic = pygame.mixer.music.load("gamesound.wav")
     pygame.mixer.music.play(-1)
