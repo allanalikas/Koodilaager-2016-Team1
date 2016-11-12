@@ -10,7 +10,8 @@ def init():
 
     player_icon = pygame.image.load("player.png")
     player_obj = player.Player(100, 200, player_icon)
-
+    gamemusic = pygame.mixer.music.load("gamesound.wav")
+    pygame.mixer.music.play(-1)
 
 def on_event(event):
     player_obj.on_event(event)
