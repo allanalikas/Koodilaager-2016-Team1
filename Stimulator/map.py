@@ -43,6 +43,11 @@ def read_map(map_data):
             elif letter == 'W':
                 map_list[row].append(6)
 
+            elif letter == 'D':
+                map_list[row].append(7)
+
+
+
         row += 1
 
     return map_list
@@ -115,6 +120,12 @@ def draw(s, cam_pos):
                          TILESIZE])
             if i == 6:
                 s.fill([255,255,40],
+                        [x * TILESIZE - cam_offset_x,
+                         y * TILESIZE - cam_offset_y,
+                         TILESIZE,
+                         TILESIZE])
+            if i == 7:
+                s.fill([255,179,0],
                         [x * TILESIZE - cam_offset_x,
                          y * TILESIZE - cam_offset_y,
                          TILESIZE,
