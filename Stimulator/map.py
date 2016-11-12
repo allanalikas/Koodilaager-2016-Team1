@@ -127,3 +127,6 @@ def draw(s, cam_pos):
 
             elif i == 7:
                 pygame.draw.rect(s, [255, 114, 0], rect)
+
+            elif i == 8:
+                pygame.draw.rect(s, [0, 255, 0], rect)
