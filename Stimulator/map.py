@@ -108,7 +108,7 @@ def draw(s, cam_pos):
                 rectangle_list.append(rect)
 
             if i == 1:
-                pygame.draw.rect(s, [0, 255, 0], rect)
+                pygame.draw.rect(s, [0, 0, 0], rect)
 
             elif i == 2:
                 pygame.draw.rect(s, [255, 0, 0], rect)
