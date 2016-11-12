@@ -65,10 +65,10 @@ class Player(Character):
 
 
     def draw(self, screen, cam_pos):
-        screen.blit(self.icon, [self.x - cam_pos[0], self.y - cam_pos[1]])
+        screen.blit(self.icon, [self.x - cam_pos[0], self.y - cam_pos[1] - 30])
 
     def collide(self, wall_list, dx, dy):
-        rect = pygame.Rect([screen_w/2 - TILESIZE/2 + dx, screen_h/2-TILESIZE/2 + dy, TILESIZE, TILESIZE])
+        rect = pygame.Rect([screen_w/2 - TILESIZE/2 + 5 + dx, screen_h/2-TILESIZE/2 + 5 + dy, TILESIZE - 10, TILESIZE - 10])
 
         index = rect.collidelist(wall_list)
 
