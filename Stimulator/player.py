@@ -12,8 +12,7 @@ class Player(Character):
         self.icon = player_icon
         
     def on_event(self, event):
-        for e in pygame.event.get():
-            if e == pygame.KEYDOWN:
+            if event.type == pygame.KEYDOWN:
                if event.key == pygame.K_UP:
                    self.y_speed = -5
 
@@ -25,6 +24,19 @@ class Player(Character):
 
                elif event.key == pygame.K_RIGHT:
                    self.x_speed = +5
+
+            elif event.type == pygame.KEYUP:
+                if event.key == pygame.K_UP:
+                    self.y_speed = 0
+
+                elif event.key == pygame.K_DOWN:
+                    self.y_speed = 0
+
+                elif event.key == pygame.K_LEFT:
+                    self.x_speed = 0
+
+                elif event.key == pygame.K_RIGHT:
+                    self.x_speed = 0
 
     def update(self):
         self.x += self.x_speed
