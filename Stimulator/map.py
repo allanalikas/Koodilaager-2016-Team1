@@ -1,5 +1,6 @@
 import pygame, sys
 from constants import *
+from math import floor
 
 MAPX = screen_w // TILESIZE
 MAPY = screen_h // TILESIZE
@@ -12,6 +13,8 @@ COUCH = "C"
 
 map1 = open("map_files/map1.data", "r")
 map1_width = int(map1.readline().strip())
+
+rectangle_list = []
 
 
 def read_map(map_data):
@@ -50,7 +53,13 @@ def return_values(map, x1, x2, y):
 map1_data = read_map(map1)
 
 
+def get_rect_list():
+    return rectangle_list
+
+
 def draw(s, cam_pos):
+    global rectangle_list
+
     tiles_x = screen_w // TILESIZE + 1
     tiles_y = screen_h // TILESIZE + 1
 
@@ -65,12 +74,17 @@ def draw(s, cam_pos):
 
     #print(subsection)
 
+    rectangle_list = []
+
     for y, j in enumerate(subsection):
         for x, i in enumerate(j):
             #print(i, x, y)
             if i == 1:
-                s.fill([0, 255, 0],
-                       [x*TILESIZE - cam_offset_x,
+                rect = pygame.Rect([x*TILESIZE - cam_offset_x,
                        y*TILESIZE - cam_offset_y,
                        TILESIZE,
                        TILESIZE])
+
+                pygame.draw.rect(s, [0, 255, 0], rect)
+
+                rectangle_list.append(rect)
