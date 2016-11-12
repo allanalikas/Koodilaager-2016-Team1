@@ -21,6 +21,7 @@ def on_event(event):
 
 def update():
     player_obj.update(map.get_rect_list())
+    enemy_obj.update(player_obj)
     cam_position[0] = player_obj.x - screen_w/2 + player_obj.rect.w/2
     cam_position[1] = player_obj.y - screen_h/2 + player_obj.rect.h/2
     # print(cam_position, player_obj.x, player_obj.y)
