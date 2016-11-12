@@ -37,7 +37,6 @@ class Player(Character):
                self.x_speed = +10
                self.icon = (self.player_icon_right)
 
-
            elif event.key == pygame.K_DOWN or event.key == pygame.K_s:
                self.y_speed = 10
                self.icon = (self.player_icon_down)
