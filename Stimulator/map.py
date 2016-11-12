@@ -10,7 +10,7 @@ WALL = "#"
 GROUND = " "
 COUCH = "C"
 """
-map1 = open("map_files/map1.data", "r")
+map1 = open("map_files/map2.data", "r")
 map1_width = int(map1.readline().strip())
 rectangle_list = []
 
@@ -49,6 +49,9 @@ def read_map(map_data):
 
             elif letter == 'R':
                 map_list[row].append(8)
+
+            elif letter == 'A':
+                map_list[row].append(9)
 
 
 
@@ -130,3 +133,6 @@ def draw(s, cam_pos):
 
             elif i == 8:
                 pygame.draw.rect(s, [0, 255, 0], rect)
+
+            elif i == 9:
+                pygame.draw.rect(s, [100, 100, 100], rect)
