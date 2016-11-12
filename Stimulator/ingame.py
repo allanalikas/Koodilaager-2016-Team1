@@ -1,6 +1,7 @@
 import player
 import constants
 import pygame
+import map
 
 
 def init():
@@ -18,6 +19,7 @@ def update():
     player_obj.update()
 
 
-def draw(screen):
+def draw(screen, cam_pos):
     screen.fill((0, 0, 0))
     player_obj.draw(screen)
+    map.draw(screen, cam_pos)
