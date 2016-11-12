@@ -8,8 +8,8 @@ cam_position = [100, 100]
 def init():
     global player_obj, player_icon
 
-    player_icon = pygame.image.load("player.png")
-    player_obj = player.Player(100, 200, player_icon)
+
+    player_obj = player.Player(100, 200)
     gamemusic = pygame.mixer.music.load("gamesound.wav")
     pygame.mixer.music.play(-1)
 
