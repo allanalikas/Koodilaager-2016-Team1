@@ -56,7 +56,7 @@ class Player(Character):
 
     def update(self, rect_list):
         if self.x_speed != 0:
-            if not self.xcollide(rect_list, self.x_speed, 0):
+            if not self.collide(rect_list, self.x_speed, 0):
                 self.x += self.x_speed
 
         if self.y_speed != 0:
