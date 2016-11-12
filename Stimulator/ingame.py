@@ -6,11 +6,12 @@ import map
 cam_position = [100, 100]
 
 def init():
-    global player_obj
+    global player_obj, player_icon
 
     player_icon = pygame.image.load("player.png")
     player_obj = player.Player(100, 200, player_icon)
-
+    gamemusic = pygame.mixer.music.load("gamesound.wav")
+    pygame.mixer.music.play(-1)
 
 def on_event(event):
     player_obj.on_event(event)

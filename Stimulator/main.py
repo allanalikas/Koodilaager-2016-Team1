@@ -5,6 +5,7 @@ from pygame.locals import *
 
 current_state = ''
 
+
 def quit_game():
     pygame.quit()
     sys.exit()
