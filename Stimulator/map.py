@@ -31,6 +31,21 @@ def read_map(map_data):
             elif letter == '#':
                 map_list[row].append(1)
 
+            elif letter == 'C':
+                map_list[row].append(2)
+
+            elif letter == 'V':
+                map_list[row].append(3)
+
+            elif letter == 'P':
+                map_list[row].append(4)
+
+            elif letter == 'K':
+                map_list[row].append(5)
+
+            elif letter == 'W':
+                map_list[row].append(6)
+
         row += 1
 
     return map_list
@@ -78,13 +93,28 @@ def draw(s, cam_pos):
 
     for y, j in enumerate(subsection):
         for x, i in enumerate(j):
-            #print(i, x, y)
-            if i == 1:
-                rect = pygame.Rect([x*TILESIZE - cam_offset_x,
-                       y*TILESIZE - cam_offset_y,
-                       TILESIZE,
-                       TILESIZE])
+            rect = pygame.Rect([x * TILESIZE - cam_offset_x,
+                                y * TILESIZE - cam_offset_y,
+                                TILESIZE,
+                                TILESIZE])
 
+            if i != 0:
+                rectangle_list.append(rect)
+
+            if i == 1:
                 pygame.draw.rect(s, [0, 255, 0], rect)
 
-                rectangle_list.append(rect)
+            elif i == 2:
+                pygame.draw.rect(s, [255, 0, 0], rect)
+
+            elif i == 3:
+                pygame.draw.rect(s, [200, 0, 0], rect)
+
+            elif i == 4:
+                pygame.draw.rect(s, [200, 200, 200], rect)
+
+            elif i == 5:
+                pygame.draw.rect(s, [133,85,40], rect)
+
+            elif i == 6:
+                pygame.draw.rect(s, [255,255,40], rect)

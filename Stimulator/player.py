@@ -13,31 +13,30 @@ class Player(Character):
         self.rect = pygame.Rect(self.x, self.y, TILESIZE, TILESIZE)
         
     def on_event(self, event):
-        #print(self.x, self.y, self.rect)
         if event.type == pygame.KEYDOWN:
-           if event.key == pygame.K_UP:
+           if event.key == pygame.K_UP or event.key == pygame.K_w:
                self.y_speed = -5
 
-           elif event.key == pygame.K_DOWN:
+           elif event.key == pygame.K_DOWN or event.key == pygame.K_s:
                self.y_speed = 5
 
-           elif event.key == pygame.K_LEFT:
+           elif event.key == pygame.K_LEFT or event.key == pygame.K_a:
                self.x_speed = -5
 
-           elif event.key == pygame.K_RIGHT:
+           elif event.key == pygame.K_RIGHT or event.key == pygame.K_d:
                self.x_speed = +5
 
         elif event.type == pygame.KEYUP:
-            if event.key == pygame.K_UP:
+            if event.key == pygame.K_UP or event.key == pygame.K_w:
                 self.y_speed = 0
 
-            elif event.key == pygame.K_DOWN:
+            elif event.key == pygame.K_DOWN or event.key == pygame.K_s:
                 self.y_speed = 0
 
-            elif event.key == pygame.K_LEFT:
+            elif event.key == pygame.K_LEFT or event.key == pygame.K_a:
                 self.x_speed = 0
 
-            elif event.key == pygame.K_RIGHT:
+            elif event.key == pygame.K_RIGHT or event.key == pygame.K_d:
                 self.x_speed = 0
 
     def update(self, rect_list):
