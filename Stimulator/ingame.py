@@ -2,14 +2,16 @@ import player
 from constants import *
 import pygame
 import map
+import enemy
 
 cam_position = [0, 0]
 
 def init():
-    global player_obj, player_icon
-
+    global player_obj, player_icon, enemy_icon, enemy_obj
+    enemy_icon = pygame.image.load("enemy.png")
     player_icon = pygame.image.load("player.png")
-    player_obj = player.Player(100, 200, player_icon)
+    player_obj = player.Player(100, 200)
+    enemy_obj = enemy.Enemy(300, 300, enemy_icon)
     gamemusic = pygame.mixer.music.load("gamesound.wav")
     pygame.mixer.music.play(-1)
 
@@ -28,4 +30,5 @@ def draw(screen):
     screen.fill((255, 255, 255))
 
     map.draw(screen, cam_position)
+    enemy_obj.draw(screen, cam_position)
     player_obj.draw(screen, cam_position)
