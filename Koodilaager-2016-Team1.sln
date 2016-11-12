@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0886C996-7E0B-40E0-A340-9E794D96449F}"
+	ProjectSection(SolutionItems) = preProject
+		Stimulator\character.py = Stimulator\character.py
+		Stimulator\constants.py = Stimulator\constants.py
+		Stimulator\ingame.py = Stimulator\ingame.py
+		Stimulator\intro.py = Stimulator\intro.py
+		Stimulator\intropic.png = Stimulator\intropic.png
+		Stimulator\introsound.wav = Stimulator\introsound.wav
+		Stimulator\main.py = Stimulator\main.py
+		Stimulator\map.py = Stimulator\map.py
+		Stimulator\player.jpg = Stimulator\player.jpg
+		Stimulator\player.py = Stimulator\player.py
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
