@@ -10,10 +10,15 @@ class Player(Character):
         self.x_speed = 0
         self.y_speed = 0
 
-        self.player_icon_down = pygame.image.load("guy.down1.png")
-        self.player_icon_up = pygame.image.load("Guy.up.png")
-        self.player_icon_left = pygame.image.load("Guy.left.png")
-        self.player_icon_right = pygame.image.load("guy.right1.png")
+        self.player_icon_down = pygame.image.load("girl.down.png")
+        self.player_icon_up = pygame.image.load("girl.up.png")
+        self.player_icon_left = pygame.image.load("girl.left.png")
+        self.player_icon_right = pygame.image.load("girl.right.png")
+
+        #self.player_icon_down_right = pygame.image.load("girl.down.right.png")
+        #self.player_icon_up_right = pygame.image.load("girl.up.right.png")
+        #self.player_icon_down_left = pygame.image.load("girl.down.left.png")
+        #self.player_icon_up_left = pygame.image.load("girl.right.left.png")
 
         self.icon = self.player_icon_down
         self.rect = pygame.Rect([self.x, self.y, TILESIZE, TILESIZE])
@@ -22,28 +27,20 @@ class Player(Character):
         if event.type == pygame.KEYDOWN:
            if event.key == pygame.K_UP or event.key == pygame.K_w:
                self.y_speed = -10
-
-           elif event.key == pygame.K_DOWN or event.key == pygame.K_s:
-               self.y_speed = 10
+               self.icon = (self.player_icon_up)
 
            elif event.key == pygame.K_LEFT or event.key == pygame.K_a:
                self.x_speed = -10
+               self.icon = (self.player_icon_left)
 
            elif event.key == pygame.K_RIGHT or event.key == pygame.K_d:
                self.x_speed = +10
-               self.icon = (self.player_icon_up)
+               self.icon = (self.player_icon_right)
+
 
            elif event.key == pygame.K_DOWN or event.key == pygame.K_s:
+               self.y_speed = 10
                self.icon = (self.player_icon_down)
-               self.y_speed = 5
-
-           elif event.key == pygame.K_LEFT or event.key == pygame.K_a:
-               self.icon = (self.player_icon_left)
-               self.x_speed = -5
-
-           elif event.key == pygame.K_RIGHT or event.key == pygame.K_d:
-               self.icon = (self.player_icon_right)
-               self.x_speed = 5
 
         elif event.type == pygame.KEYUP:
             if event.key == pygame.K_UP or event.key == pygame.K_w:
