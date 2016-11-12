@@ -3,8 +3,6 @@ from constants import *
 from character import Character
 
 
-
-
 class Player(Character):
     def __init__(self, x, y, player_icon):
         self.x = x
