@@ -8,7 +8,7 @@ cam_position = [100, 100]
 def init():
     global player_obj
 
-    player_icon = pygame.image.load("player.jpg")
+    player_icon = pygame.image.load("player.png")
     player_obj = player.Player(100, 200, player_icon)
 
 
@@ -24,7 +24,7 @@ def update():
 
 
 def draw(screen):
-    screen.fill((0, 0, 0))
+    screen.fill((255, 255, 255))
 
     map.draw(screen, cam_position)
     player_obj.draw(screen)

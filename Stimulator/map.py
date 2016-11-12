@@ -28,6 +28,9 @@ def read_map(map_data):
             elif letter == '#':
                 map_list[row].append(1)
 
+            elif letter == 'C':
+                map_list[row].append(2)
+
         row += 1
 
     return map_list
@@ -69,8 +72,14 @@ def draw(s, cam_pos):
         for x, i in enumerate(j):
             #print(i, x, y)
             if i == 1:
-                s.fill([0, 255, 0],
+                s.fill([0, 0, 0],
                        [x*TILESIZE - cam_offset_x,
                        y*TILESIZE - cam_offset_y,
                        TILESIZE,
                        TILESIZE])
+            if i == 2:
+                s.fill([255, 0, 0],
+                        [x * TILESIZE - cam_offset_x,
+                        y * TILESIZE - cam_offset_y,
+                        TILESIZE,
+                        TILESIZE])
