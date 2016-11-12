@@ -9,6 +9,14 @@ MAPY = screen_h // TILESIZE
 WALL = "#"
 GROUND = " "
 COUCH = "C"
+VOODI = "V"
+PADI = "V"
+KAPP/LAUD = "K"
+WC = "W"
+DIIVAN = "D"
+ROHI/MURU = "R"
+AHI = "A"
+TREPI PILDI ASUKOHT = "3"
 """
 map1 = open("map_files/map1.data", "r")
 map1_width = int(map1.readline().strip())
@@ -55,10 +63,6 @@ def read_map(map_data):
 
             elif letter == '3':
                 map_list[row].append(10)
-
-            elif letter == '1':
-                map_list[row].append(11)
-
 
         row += 1
 
