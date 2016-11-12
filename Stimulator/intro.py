@@ -15,7 +15,7 @@ def on_event(event):
     if event.type == pygame.KEYDOWN:
         if event.key == pygame.K_ESCAPE or event.key == pygame.K_SPACE:
             pygame.mixer.music.stop()
-            raise State_switcher('ingame')
+            raise State_switcher('menu')
 
 def update():
     pass
@@ -44,4 +44,4 @@ def draw(screen):
 
     elif fade == 0 and not fadeIn:
         pygame.mixer.music.stop()
-        raise State_switcher('ingame')
+        raise State_switcher('menu')
