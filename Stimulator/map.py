@@ -31,6 +31,18 @@ def read_map(map_data):
             elif letter == 'C':
                 map_list[row].append(2)
 
+            elif letter == 'V':
+                map_list[row].append(3)
+
+            elif letter == 'P':
+                map_list[row].append(4)
+
+            elif letter == 'K':
+                map_list[row].append(5)
+
+            elif letter == 'W':
+                map_list[row].append(6)
+
         row += 1
 
     return map_list
@@ -83,3 +95,27 @@ def draw(s, cam_pos):
                         y * TILESIZE - cam_offset_y,
                         TILESIZE,
                         TILESIZE])
+            if i == 3:
+                s.fill([200, 0, 0],
+                       [x * TILESIZE - cam_offset_x,
+                        y * TILESIZE - cam_offset_y,
+                        TILESIZE,
+                        TILESIZE])
+            if i == 4:
+                s.fill([200, 200, 200],
+                        [x * TILESIZE - cam_offset_x,
+                         y * TILESIZE - cam_offset_y,
+                         TILESIZE,
+                         TILESIZE])
+            if i == 5:
+                s.fill([133,85,40],
+                        [x * TILESIZE - cam_offset_x,
+                         y * TILESIZE - cam_offset_y,
+                         TILESIZE,
+                         TILESIZE])
+            if i == 6:
+                s.fill([255,255,40],
+                        [x * TILESIZE - cam_offset_x,
+                         y * TILESIZE - cam_offset_y,
+                         TILESIZE,
+                         TILESIZE])
