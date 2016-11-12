@@ -6,6 +6,7 @@ import enemy
 
 cam_position = [0, 0]
 
+
 def init():
     global player_obj, player_icon, enemy_icon, enemy_obj
     enemy_icon = pygame.image.load("enemy.png")
@@ -14,8 +15,21 @@ def init():
     enemy_obj = enemy.Enemy(300, 300, enemy_icon)
     gamemusic = pygame.mixer.music.load("gamesound.wav")
     pygame.mixer.music.play(-1)
+    global pause
+    pause = False
+
 
 def on_event(event):
+    global pause
+    if event.type == pygame.KEYDOWN:
+        if event.key == pygame.K_m:
+            if not pause:
+                pygame.mixer.music.pause()
+                pause = True
+            else:
+                pygame.mixer.music.unpause()
+                pause = False
+
     player_obj.on_event(event)
 
 
