@@ -46,6 +46,11 @@ def read_map(map_data):
             elif letter == 'W':
                 map_list[row].append(6)
 
+            elif letter == 'D':
+                map_list[row].append(7)
+
+
+
         row += 1
 
     return map_list

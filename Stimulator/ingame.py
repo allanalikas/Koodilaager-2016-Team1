@@ -7,11 +7,18 @@ import enemy
 cam_position = [0, 0]
 
 def init():
+<<<<<<< HEAD
     global player_obj, player_icon, enemy_icon, enemy_obj
     enemy_icon = pygame.image.load("enemy.png")
     player_icon = pygame.image.load("player.png")
     player_obj = player.Player(100, 200, player_icon)
     enemy_obj = enemy.Enemy(300, 300, enemy_icon)
+=======
+    global player_obj, player_icon
+
+
+    player_obj = player.Player(100, 200)
+>>>>>>> 80011f574ff578e743c901937a520f117d6620c4
     gamemusic = pygame.mixer.music.load("gamesound.wav")
     pygame.mixer.music.play(-1)
 
