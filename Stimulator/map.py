@@ -107,49 +107,6 @@ def draw(s, cam_pos):
                 rectangle_list.append(rect)
 
             if i == 1:
-<<<<<<< HEAD
-                s.fill([0, 0, 0],
-                       [x*TILESIZE - cam_offset_x,
-                       y*TILESIZE - cam_offset_y,
-                       TILESIZE,
-                       TILESIZE])
-            if i == 2:
-                s.fill([255, 0, 0],
-                        [x * TILESIZE - cam_offset_x,
-                        y * TILESIZE - cam_offset_y,
-                        TILESIZE,
-                        TILESIZE])
-            if i == 3:
-                s.fill([200, 0, 0],
-                       [x * TILESIZE - cam_offset_x,
-                        y * TILESIZE - cam_offset_y,
-                        TILESIZE,
-                        TILESIZE])
-            if i == 4:
-                s.fill([200, 200, 200],
-                        [x * TILESIZE - cam_offset_x,
-                         y * TILESIZE - cam_offset_y,
-                         TILESIZE,
-                         TILESIZE])
-            if i == 5:
-                s.fill([133,85,40],
-                        [x * TILESIZE - cam_offset_x,
-                         y * TILESIZE - cam_offset_y,
-                         TILESIZE,
-                         TILESIZE])
-            if i == 6:
-                s.fill([255,255,40],
-                        [x * TILESIZE - cam_offset_x,
-                         y * TILESIZE - cam_offset_y,
-                         TILESIZE,
-                         TILESIZE])
-            if i == 7:
-                s.fill([255,179,0],
-                        [x * TILESIZE - cam_offset_x,
-                         y * TILESIZE - cam_offset_y,
-                         TILESIZE,
-                         TILESIZE])
-=======
                 pygame.draw.rect(s, [0, 255, 0], rect)
 
             elif i == 2:
@@ -166,4 +123,3 @@ def draw(s, cam_pos):
 
             elif i == 6:
                 pygame.draw.rect(s, [255,255,40], rect)
->>>>>>> 136f1808621146cfc8d577a0c6581cdf4868172d
