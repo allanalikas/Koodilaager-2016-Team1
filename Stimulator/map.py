@@ -26,11 +26,8 @@ map1 =   """
 
 map1 = map1.replace('\n', '')
 
-def draw(s, cam_pos):
-    x = 5
-    y = 3
-    print(map1[y*MAP_W + x])
 
+def draw(s, cam_pos):
     cam_tiles_x = cam_pos[0] // TILESIZE
     cam_tiles_y = cam_pos[1] // TILESIZE
 
@@ -40,7 +37,10 @@ def draw(s, cam_pos):
     for j in range(MAPY):
         for i in range(MAPX):
             try:
-                value = map1[(j+cam_tiles_y)*MAP_W + i+ cam_tiles_x]
+                if int((j+cam_tiles_y)*MAP_W + i + cam_tiles_x) >= 0:
+                    value = map1[int((j+cam_tiles_y)*MAP_W + i + cam_tiles_x)]
+                else:
+                    value = ' '
             except:
                 value = ' '
 

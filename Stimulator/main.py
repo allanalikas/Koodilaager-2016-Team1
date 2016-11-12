@@ -4,7 +4,6 @@ from constants import *
 from pygame.locals import *
 
 current_state = ''
-cam_position = [100, 100]
 
 def quit_game():
     pygame.quit()
@@ -38,7 +37,7 @@ if __name__ == '__main__':
                     current_state.on_event(event)
 
             current_state.update()
-            current_state.draw(screen, cam_position)
+            current_state.draw(screen)
 
             pygame.display.flip()
 
