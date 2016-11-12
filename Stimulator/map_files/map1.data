@@ -1,38 +1,39 @@
-51
-################################################
-#PVV     K#PP          ##PP            VP#     #
-#PVV     K#VV          ##VV            VV#     #
-#         #VV          ##VV            VV#     #
-#K        #            ##                #     #
-#K        ####### ################# ######     #
-#K        #         ########          #        #
-#         #         #     ##          #        #
-#PVV                     W##          #        #
-#PVV      #         #     ##          #        #
-############### ################## ####        #
-#                                              #
-#                                              #
-#                                              #
-############# ################ #########       #
-#PP        K#     #K  KKK  VV# #PP   PP#       #
-#VV        K#     #K       VV# #VV   VV#       #
-#VV         #     #        PP# #VV   VV#       #
-#K          #                #         #       #
-#           #     #        PP# #KKK  KK#       #
-#K          #     #K       VV# #########       #
-#K                #K       VV#       PP#       #
- #K          #     ############ #VV   VV#       #
-#PVV        #          W#W   # #VV   VV#       #
-#PVV        #     #     #      #PP KKKK#       #
-########################################       #
-########################################       #
-#KKKKKKKKK        VK#CC     CCC                #
-#                 VK#CC       C                #
-#                  K#CC       C                #
-#                  K#                          #
-#                 VK#                          #
-#                 VK#          C               #
-#                   #          C               #
-#                   #          C               #
-#KKK                       CCC                 #
-######################################       ###
+0
+################################################RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#PVV     K#PP         K##PP            VP#     #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#PVV     K#VV         K##VV            VV#     #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#         #VV         K##VV            VV#     #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#K        #            ##                #     #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#K        ######   ##############   ######     #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#K        #              W##        #   W#     #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#                         ##        #    #     #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#PVV                #     ##             #     #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#PVV      #         #     ##             #     #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+##############  ################   #######     #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#                                                                                            R
+#                                                                                            R
+#                                                                                            R
+#############  ##############   #########      #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#PP        K#    #K  KKK  VV#   #PPKKKPP#      #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#VV        K#    #K       VV#   #VV   VV#      #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#VV         #             PP#   #VV   VV#      #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#K          #               #           #      #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#           #    #        PP#         KK#      #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#K          #    #K       VV#   #########      #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#K               #K       VV#         PP#      #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#K               ############         VV#      #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#PVV        #         W#W   #   #VV   VV#      #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#           #          #        #VV     #      #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#PVV        #    #     #        #PP KKKK#      #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#########################################      #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#########################################      #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#KKKKKKKKK        VK#DD    DDDDD               #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#                 VK#DD       DD               #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#                  K#DD       DD               #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#                  K#                          #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#                 VK#                          #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#                 VK#         DD               #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#                   #         DD               #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#                             DD               #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+#KKK                       DDDDD               #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+######################################       ###RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR

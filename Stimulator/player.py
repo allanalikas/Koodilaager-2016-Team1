@@ -15,16 +15,16 @@ class Player(Character):
     def on_event(self, event):
         if event.type == pygame.KEYDOWN:
            if event.key == pygame.K_UP or event.key == pygame.K_w:
-               self.y_speed = -5
+               self.y_speed = -10
 
            elif event.key == pygame.K_DOWN or event.key == pygame.K_s:
-               self.y_speed = 5
+               self.y_speed = 10
 
            elif event.key == pygame.K_LEFT or event.key == pygame.K_a:
-               self.x_speed = -5
+               self.x_speed = -10
 
            elif event.key == pygame.K_RIGHT or event.key == pygame.K_d:
-               self.x_speed = +5
+               self.x_speed = +10
 
         elif event.type == pygame.KEYUP:
             if event.key == pygame.K_UP or event.key == pygame.K_w:
