@@ -1,4 +1,3 @@
-
 0
 ################################################RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
 #PVV     K#PP         K##PP            VP#     #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
@@ -38,43 +37,3 @@
 #                             DD               #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
 #KKK                       DDDDD               #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
 ######################################       ###RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
-=======
-51
-################################################
-#PVV     K#PP          ##PP            VP#     #
-#PVV     K#VV          ##VV            VV#     #
-#         #VV          ##VV            VV#     #
-#K        #            ##                #     #
-#K        ####### ################# ######     #
-#K        #         ########          #        #
-#         #         #     ##          #        #
-#PVV                     W##          #        #
-#PVV      #         #     ##          #        #
-############### ################## ####        #
-#                                              #
-#                                              #
-#                                              #
-############# ################ #########       #
-#PP        K#     #K  KKK  VV# #PP   PP#       #
-#VV        K#     #K       VV# #VV   VV#       #
-#VV         #     #        PP# #VV   VV#       #
-#K          #                #         #       #
-#           #     #        PP# #KKK  KK#       #
-#K          #     #K       VV# #########       #
-#K                #K       VV#       PP#       #
-#K          #     ############ #VV   VV#       #
-#PVV        #          W#W   # #VV   VV#       #
-#PVV        #     #     #      #PP KKKK#       #
-########################################       #
-########################################       #
-#KKKKKKKKK        VK#CC     CCC                #
-#                 VK#CC       C                #
-#                  K#CC       C                #
-#                  K#                          #
-#                 VK#                          #
-#                 VK#          C               #
-#                   #          C               #
-#                   #          C               #
-#KKK                       CCC                 #
-######################################       ###
->>>>>>> 60a5bc248a959109545c15f0ff2338da67085c61
