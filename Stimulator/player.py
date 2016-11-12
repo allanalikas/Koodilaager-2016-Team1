@@ -13,8 +13,8 @@ class Player(Character):
         self.acc_x = 0
         self.acc_y = 0
 
-        self.max_acc = 1
-        self.max_speeed = 13
+        self.max_acc = 0.2
+        self.max_speeed = 5
 
         self.player_icon_down = pygame.image.load("girl.down.png")
         self.player_icon_up = pygame.image.load("girl.up.png")
