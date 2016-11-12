@@ -21,11 +21,11 @@ if __name__ == '__main__':
 
     pygame.init()
 
-    flags = SRCALPHA | DOUBLEBUF
+    flags = pygame.SRCALPHA | pygame.DOUBLEBUF
 
-    screen = pygame.display.set_mode((var.screen_w, var.screen_h), flags)
+    screen = pygame.display.set_mode((screen_w, screen_h), flags)
     clock = pygame.time.Clock()
-    ms = clock.tick(var.fps)
+    ms = clock.tick(fps)
 
     switch_state('ingame')
 
@@ -35,9 +35,10 @@ if __name__ == '__main__':
                 quit_game()
             else:
                 current_state.on_event(event)
+
         current_state.update()
         current_state.draw(screen)
 
         pygame.display.flip()
 
-        ms = clock.tick(var.fps)
+        ms = clock.tick(fps)
