@@ -18,7 +18,7 @@ class Player(Character):
 
                elif event.key == pygame.K_DOWN:
                    self.y_speed = 5
-
+        
                elif event.key == pygame.K_LEFT:
                    self.x_speed = -5
 

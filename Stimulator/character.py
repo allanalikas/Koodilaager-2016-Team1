@@ -1,7 +1,7 @@
 import pygame
 from constants import *
 
-character_icon = pygame.image.load("player.jpg")
+character_icon = pygame.image.load("player.png")
 
 
 class Character(pygame.sprite.Sprite):
