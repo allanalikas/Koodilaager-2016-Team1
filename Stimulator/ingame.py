@@ -21,5 +21,6 @@ def update():
 
 def draw(screen, cam_pos):
     screen.fill((0, 0, 0))
-    player_obj.draw(screen)
+
     map.draw(screen, cam_pos)
+    player_obj.draw(screen)

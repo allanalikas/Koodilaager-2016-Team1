@@ -10,18 +10,10 @@ class Player(Character):
         self.icon = player_icon
         
     def on_event(self, event):
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_w:
-                pass
-            elif event.key == pygame.K_a:
-                pass
-            elif event.key == pygame.K_s:
-                pass
-            elif event.key == pygame.K_d:
-                pass
+        pass
 
     def update(self):
         pass
 
     def draw(self, screen):
-        screen.blit(self.icon, [screen_w/2, screen_h/2])
+        screen.blit(self.icon, [screen_w/2 -25, screen_h/2 -25])
