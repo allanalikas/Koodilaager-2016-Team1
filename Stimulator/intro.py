@@ -13,7 +13,7 @@ def init():
 
 def on_event(event):
     if event.type == pygame.KEYDOWN:
-        if event.key == pygame.K_ESCAPE:
+        if event.key == pygame.K_ESCAPE or event.key == pygame.K_SPACE:
             pygame.mixer.music.stop()
             raise State_switcher('ingame')
 
