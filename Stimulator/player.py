@@ -10,6 +10,12 @@ class Player(Character):
         self.x_speed = 0
         self.y_speed = 0
 
+        self.acc_x = 0
+        self.acc_y = 0
+
+        self.max_acc = 1
+        self.max_speeed = 13
+
         self.player_icon_down = pygame.image.load("girl.down.png")
         self.player_icon_up = pygame.image.load("girl.up.png")
         self.player_icon_left = pygame.image.load("girl.left.png")
@@ -26,35 +32,45 @@ class Player(Character):
     def on_event(self, event):
         if event.type == pygame.KEYDOWN:
            if event.key == pygame.K_UP or event.key == pygame.K_w:
-               self.y_speed = -10
+               self.acc_y = -self.max_acc
                self.icon = (self.player_icon_up)
 
            elif event.key == pygame.K_LEFT or event.key == pygame.K_a:
-               self.x_speed = -10
+               self.acc_x = -self.max_acc
                self.icon = (self.player_icon_left)
 
            elif event.key == pygame.K_RIGHT or event.key == pygame.K_d:
-               self.x_speed = +10
+               self.acc_x = self.max_acc
                self.icon = (self.player_icon_right)
 
            elif event.key == pygame.K_DOWN or event.key == pygame.K_s:
-               self.y_speed = 10
+               self.acc_y = self.max_acc
                self.icon = (self.player_icon_down)
 
         elif event.type == pygame.KEYUP:
             if event.key == pygame.K_UP or event.key == pygame.K_w:
+                self.acc_y = 0
                 self.y_speed = 0
 
             elif event.key == pygame.K_DOWN or event.key == pygame.K_s:
+                self.acc_y = 0
                 self.y_speed = 0
 
             elif event.key == pygame.K_LEFT or event.key == pygame.K_a:
+                self.acc_x = 0
                 self.x_speed = 0
 
             elif event.key == pygame.K_RIGHT or event.key == pygame.K_d:
+                self.acc_x = 0
                 self.x_speed = 0
 
     def update(self, rect_list):
+        if abs(self.x_speed) < self.max_speeed:
+            self.x_speed += self.acc_x
+
+        if abs(self.y_speed) < self.max_speeed:
+            self.y_speed += self.acc_y
+
         if self.x_speed != 0:
             if not self.collide(rect_list, self.x_speed, 0):
                 self.x += self.x_speed
