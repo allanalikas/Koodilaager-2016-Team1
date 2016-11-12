@@ -15,8 +15,8 @@ class Enemy(Character):
         screen.blit(self.icon, [self.x - cam_pos[0], self.y - cam_pos[1]])
 
     def update(self, player, map_data):
-        tile_x = self.x // TILESIZE
-        tile_y = self.y // TILESIZE
+        tile_x = (self.x // TILESIZE) + 1
+        tile_y = (self.y // TILESIZE) + 1
 
         # left = 1, up = 2, right = 3, down = 4
         possible_dirs = []
