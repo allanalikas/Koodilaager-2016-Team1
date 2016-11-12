@@ -4,6 +4,7 @@ import pygame
 import map
 
 
+
 def init():
     global player_obj
 
