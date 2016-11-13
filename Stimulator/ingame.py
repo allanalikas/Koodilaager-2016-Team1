@@ -51,6 +51,8 @@ def update():
         bullet_list.pop(i)
     # print(cam_position, player_obj.x, player_obj.y)
 
+    enemy_obj.collide(bullet_list)
+
 
 def draw(screen):
     screen.fill((255, 255, 255)) #talv ju!

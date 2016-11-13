@@ -105,7 +105,6 @@ def read_map(map_data):
             elif letter == ',':
                 map_list[row].append(17)
 
-
         row += 1
 
     return map_list
@@ -214,7 +213,3 @@ def draw(s, cam_pos):
 
             elif i == 17:
                 s.blit(tiles["BED3_BOTTOM"], rect)
-
-
-
-
