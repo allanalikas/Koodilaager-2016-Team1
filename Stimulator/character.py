@@ -8,7 +8,7 @@ class Character(pygame.sprite.Sprite):
     def __init__(self, x, y, character_icon):
         pass
 
-    def update(self):
+    def update(self, rect_list):
         pass
 
     def draw(self, screen):
