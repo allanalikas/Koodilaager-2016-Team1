@@ -2,15 +2,15 @@ import pygame
 from character import Character
 from constants import *
 
-
 class Enemy(Character):
 
     def __init__(self, x, y, enemy_icon):
         self.x = x
         self.y = y
-        self.x_speed = 2
-        self.y_speed = 2
+        self.x_speed = 1
+        self.y_speed = 1
         self.icon = enemy_icon
+        self.dead = False
 
     def draw(self, screen, cam_pos):
         screen.blit(self.icon, [self.x - cam_pos[0], self.y - cam_pos[1]])
