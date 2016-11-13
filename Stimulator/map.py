@@ -5,19 +5,6 @@ from math import floor
 MAPX = screen_w // TILESIZE
 MAPY = screen_h // TILESIZE
 
-"""
-WALL = "#"
-GROUND = " "
-COUCH = "C"
-VOODI = "V"
-PADI = "V"
-KAPP/LAUD = "K"
-WC = "W"
-DIIVAN = "D"
-ROHI/MURU = "R"
-AHI = "A"
-TREPI PILDI ASUKOHT = "3"
-"""
 map1 = open("map_files/map1.data", "r")
 map1_width = int(map1.readline().strip())
 rectangle_list = []
@@ -100,6 +87,23 @@ def read_map(map_data):
             elif letter == '3':
                 map_list[row].append(11)
 
+            elif letter == '4':
+                map_list[row].append(12)
+
+            elif letter == '/':
+                map_list[row].append(13)
+
+            elif letter == 'B':
+                map_list[row].append(14)
+
+            elif letter == 'N':
+                map_list[row].append(15)
+
+            elif letter == 'M':
+                map_list[row].append(16)
+
+            elif letter == ',':
+                map_list[row].append(17)
 
         row += 1
 
@@ -192,4 +196,20 @@ def draw(s, cam_pos):
             elif i == 11:
                 s.blit(tiles["WALL_CORNER3"], rect)
 
+            elif i == 12:
+                s.blit(tiles["WALL_CORNER4"], rect)
 
+            elif i == 13:
+                s.blit(tiles["WALL_VERTICAL"], rect)
+
+            elif i == 14:
+                s.blit(tiles["BED2_MIDDLE"], rect)
+
+            elif i == 15:
+                s.blit(tiles["BED4_MIDDLE"], rect)
+
+            elif i == 16:
+                s.blit(tiles["BED3_MIDDLE"], rect)
+
+            elif i == 17:
+                s.blit(tiles["BED3_BOTTOM"], rect)

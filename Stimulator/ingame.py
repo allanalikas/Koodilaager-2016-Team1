@@ -14,10 +14,11 @@ def init():
     enemy_icon = pygame.image.load("Kera.png")
     player_icon = pygame.image.load("player.png")
     player_obj = player.Player(100, 650)
-    enemy_obj = enemy.Enemy(300, 2020, enemy_icon)
+    enemy_obj = enemy.Enemy(300, 1800, enemy_icon)
     gamemusic = pygame.mixer.music.load("gamesound.wav")
     pygame.mixer.music.play(-1)
     pygame.mouse.set_visible(True)
+
 
 def on_event(event):
     player_obj.on_event(event, bullet_list)
@@ -35,7 +36,7 @@ def update():
     dead_list = []
 
     for i, bullet in enumerate(bullet_list):
-        if(bullet.dead == True):
+        if bullet.dead == True:
             dead_list.append(i)
 
     for i in sorted(dead_list)[::-1]:
@@ -43,9 +44,11 @@ def update():
         bullet_list.pop(i)
     # print(cam_position, player_obj.x, player_obj.y)
 
+    enemy_obj.collide(bullet_list)
+
 
 def draw(screen):
-    screen.fill((0, 0, 0))
+    screen.fill((255, 255, 255)) #talv ju!
 
     map.draw(screen, cam_position)
     enemy_obj.draw(screen, cam_position)

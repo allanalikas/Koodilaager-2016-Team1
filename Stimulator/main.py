@@ -1,3 +1,5 @@
+#game has been made by Gert J6giste,  Karl Caspar Synter, Rauno Jaaska, Allan Alikas, Andre Viibur in NRG 12/13.11.2016
+#by Arvutiklubi's proge6htu team 1
 import pygame
 import sys
 from constants import *
