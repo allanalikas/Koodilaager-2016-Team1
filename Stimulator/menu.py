@@ -39,7 +39,7 @@ def update():
 
 def draw(screen):
     screen.fill((0, 255, 0))
-    font_tnr = pygame.font.Font(None, 36)
+    font_tnr = pygame.font.SysFont(size=36, name="britannic")
     global select
 
     if select == 0:

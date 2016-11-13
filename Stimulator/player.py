@@ -22,7 +22,7 @@ class Player(Character):
         self.player_icon_right = pygame.image.load("girl.right.png")
 
         #self.player_icon_down_right = pygame.image.load("girl.down.right.png")
-        #self.player_icon_up_right = pygame.image.load("girl.up.right.png")
+        self.player_icon_up_right = pygame.image.load("girl.up.right.png")
         #self.player_icon_down_left = pygame.image.load("girl.down.left.png")
         #self.player_icon_up_left = pygame.image.load("girl.right.left.png")
 
@@ -37,7 +37,10 @@ class Player(Character):
            if event.key == pygame.K_UP or event.key == pygame.K_w:
                self.acc_y = -self.max_acc
                self.icon = (self.player_icon_up)
-
+           if event.key == pygame.K_UP and pygame.K_RIGHT:
+               self.y_speed = -10
+               self.x_speed = 10
+               self.icon = (self.player_icon_up_right)
            elif event.key == pygame.K_LEFT or event.key == pygame.K_a:
                self.acc_x = -self.max_acc
                self.icon = (self.player_icon_left)
