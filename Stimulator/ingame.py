@@ -17,21 +17,8 @@ def init():
     enemy_obj = enemy.Enemy(300, 2020, enemy_icon)
     gamemusic = pygame.mixer.music.load("gamesound.wav")
     pygame.mixer.music.play(-1)
-    global pause
-    pause = False
-
 
 def on_event(event):
-    global pause
-    if event.type == pygame.KEYDOWN:
-        if event.key == pygame.K_m:
-            if not pause:
-                pygame.mixer.music.pause()
-                pause = True
-            else:
-                pygame.mixer.music.unpause()
-                pause = False
-
     player_obj.on_event(event, bullet_list)
 
 

@@ -125,8 +125,6 @@ class Player(Character):
         elif mouse_x > 0 and mouse_y > 0:
             self.angle = 270 + math.atan(mousa_x/mousa_y) / (2 * math.pi) * 360
 
-        print(self.angle)
-
     def draw(self, screen, cam_pos):
         surf = pygame.transform.rotate(self.icon, self.angle)
         saiz = surf.get_rect().size
