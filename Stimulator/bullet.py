@@ -4,8 +4,8 @@ from constants import *
 class Bullet():
     def __init__(self, x, y, x_vel, y_vel):
         self.dead = False
-        self.pos = [x, y]
-        self.vel = [x_vel, y_vel]
+        self.pos = [x+25, y+20]
+        self.vel = [(x_vel)*0.1, (y_vel)*0.1]
         self.icon = pygame.image.load ("bullet.png")
 
     def update(self,map_data):
