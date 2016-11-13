@@ -11,5 +11,5 @@ class Character(pygame.sprite.Sprite):
     def update(self, rect_list):
         pass
 
-    def draw(self, screen):
+    def draw(self, screen, cam_pos):
         pass
