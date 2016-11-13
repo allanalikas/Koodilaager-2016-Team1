@@ -2,6 +2,7 @@ import pygame
 from constants import *
 from character import Character
 from bullet import *
+import math
 
 class Player(Character):
     def __init__(self, x, y):
@@ -68,11 +69,13 @@ class Player(Character):
                 self.x_speed = 0
 
     def shoot(self, mouse_pos, bullet_list):
-        vel_x = -(screen_w/2 - mouse_pos[0])
-        vel_y = -(screen_h/2 - mouse_pos[1])
-
+        h = math.sqrt((math.pow( -(screen_w/2 - mouse_pos[0]), 2 )) +
+                      (math.pow( -(screen_h / 2 - mouse_pos[1]), 2)))
+        print(h)
+        vel_x =( (-(screen_w/2 - mouse_pos[0])) / h ) * 3
+        vel_y = (-(screen_h/2 - mouse_pos[1])) / h * 3
+        print(vel_x, vel_y)
         bullet_list.append(Bullet(self.x, self.y, vel_x, vel_y))
-
     def update(self, rect_list):
         if abs(self.x_speed) < self.max_speeed:
             self.x_speed += self.acc_x

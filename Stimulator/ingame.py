@@ -8,6 +8,7 @@ from bullet import *
 cam_position = [0, 0]
 bullet_list = []
 
+
 def init():
     global player_obj, player_icon, enemy_icon, enemy_obj, bullet_obj
     enemy_icon = pygame.image.load("Kera.png")
@@ -41,7 +42,17 @@ def update():
     cam_position[1] = player_obj.y - screen_h/2 + player_obj.rect.h/2
 
     for i in bullet_list:
-        i.update(map.get_rect_list())
+        i.update(map.map1_data)
+
+    dead_list = []
+
+    for i, bullet in enumerate(bullet_list):
+        if(bullet.dead == True):
+            dead_list.append(i)
+
+    for i in sorted(dead_list)[::-1]:
+
+        bullet_list.pop(i)
     # print(cam_position, player_obj.x, player_obj.y)
 
 
