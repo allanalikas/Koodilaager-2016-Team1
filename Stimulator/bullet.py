@@ -7,7 +7,7 @@ class Bullet():
         self.pos = [x+25, y+20]
         self.vel = [(x_vel)*0.1, (y_vel)*0.1]
         self.icon = pygame.image.load ("bullet.png")
-        self.speed = 30
+        self.speed = 300
 
     def update(self,map_data):
         self.pos[0] += self.vel[0] * self.speed
