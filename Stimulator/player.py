@@ -57,7 +57,6 @@ class Player(Character):
                 self.acc_y = 0
                 self.y_speed = 0
 
-
             elif event.key == pygame.K_DOWN or event.key == pygame.K_s:
                 self.acc_y = 0
                 self.y_speed = 0
