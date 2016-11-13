@@ -37,9 +37,11 @@ def on_event(e):
             else:
                 select -= 1
 
-        if e.key == pygame.K_RETURN or pygame.K_SPACE:
+        if e.key == pygame.K_RETURN or e.key == pygame.K_SPACE:
             if select == 0:
                 raise State_switcher('ingame')
+            if select == 1:
+                raise State_switcher('credits')
             if select == 2:
                 main.quit_game()
 

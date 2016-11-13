@@ -19,7 +19,6 @@ def init(pause):
     gamemusic = pygame.mixer.music.load("gamesound.wav")
     pygame.mixer.music.play(-1)
 
-    print(pause)
     if pause:
         pygame.mixer.music.pause()
     else:
