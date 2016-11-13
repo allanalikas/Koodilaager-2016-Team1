@@ -28,7 +28,7 @@ def update():
     player_obj.update(map.get_rect_list())
     enemy_obj.update(player_obj, map.map1_data)
     cam_position[0] = player_obj.x - screen_w/2 + player_obj.rect.w/2
-    cam_position[1] = player_obj.y - screen_h/2 + player_obj.rect.h/    2
+    cam_position[1] = player_obj.y - screen_h/2 + player_obj.rect.h/2
 
     for i in bullet_list:
         i.update(map.map1_data)
@@ -36,7 +36,7 @@ def update():
     dead_list = []
 
     for i, bullet in enumerate(bullet_list):
-        if(bullet.dead == True):
+        if bullet.dead == True:
             dead_list.append(i)
 
     for i in sorted(dead_list)[::-1]:
