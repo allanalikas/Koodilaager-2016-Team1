@@ -8,8 +8,8 @@ class Enemy(Character):
     def __init__(self, x, y, enemy_icon):
         self.x = x
         self.y = y
-        self.x_speed = 2
-        self.y_speed = 2
+        self.x_speed = 1
+        self.y_speed = 1
         self.icon = enemy_icon
 
     def draw(self, screen, cam_pos):
