@@ -91,11 +91,21 @@ def read_map(map_data):
             elif letter == 'R':
                 map_list[row].append(8)
 
-            elif letter == 'A':
+            elif letter == '1':
                 map_list[row].append(9)
 
-            elif letter == '3':
+            elif letter == '2':
                 map_list[row].append(10)
+
+            elif letter == '3':
+                map_list[row].append(11)
+
+            elif letter == '4':
+                map_list[row].append(12)
+
+            elif letter == '/':
+                map_list[row].append(13)
+
 
         row += 1
 
@@ -180,7 +190,19 @@ def draw(s, cam_pos):
                 s.blit(tiles["GRASS"], rect)
 
             elif i == 9:
-                pygame.draw.rect(s, [100, 100, 100], rect)
+                s.blit(tiles["WALL_CORNER1"], rect)
 
             elif i == 10:
-                pygame.draw.rect(s, [195, 5, 248], rect)
+                s.blit(tiles["WALL_CORNER2"], rect)
+
+            elif i == 11:
+                s.blit(tiles["WALL_CORNER3"], rect)
+
+            elif i == 12:
+                s.blit(tiles["WALL_CORNER4"], rect)
+
+            elif i == 13:
+                s.blit(tiles["WALL_VERTICAL"], rect)
+
+
+
