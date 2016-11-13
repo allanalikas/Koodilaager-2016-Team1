@@ -46,7 +46,7 @@ def update():
 
 
 def draw(screen):
-    screen.fill((0, 0, 0))
+    screen.fill((255, 255, 255)) #talv ju!
 
     map.draw(screen, cam_position)
     enemy_obj.draw(screen, cam_position)
