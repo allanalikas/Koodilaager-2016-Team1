@@ -56,11 +56,7 @@ class Player(Character):
             if event.key == pygame.K_UP or event.key == pygame.K_w:
                 self.acc_y = 0
                 self.y_speed = 0
-            if event.key == pygame.K_UP and pygame.K_RIGHT:
-                self.acc_y = 0
-                self.acc_x = 0
-                self.y_speed = 0
-                self.x_speed = 0
+
 
             elif event.key == pygame.K_DOWN or event.key == pygame.K_s:
                 self.acc_y = 0
@@ -73,6 +69,12 @@ class Player(Character):
             elif event.key == pygame.K_RIGHT or event.key == pygame.K_d:
                 self.acc_x = 0
                 self.x_speed = 0
+
+    """if event.key == pygame.K_UP and pygame.K_RIGHT:
+        self.acc_y = 0
+        self.acc_x = 0
+        self.y_speed = 0
+        self.x_speed = 0"""
 
     def shoot(self, mouse_pos, bullet_list):
         h = math.sqrt((math.pow( -(screen_w/2 - mouse_pos[0]), 2 )) +
