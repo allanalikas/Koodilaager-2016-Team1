@@ -22,6 +22,39 @@ map1 = open("map_files/map1.data", "r")
 map1_width = int(map1.readline().strip())
 rectangle_list = []
 
+tile_sheet = pygame.image.load("TILESHEET.png")
+
+tiles = {
+    "WALL_HORIZONTAL": tile_sheet.subsurface([300, 0, 50, 50]),
+    "WALL_VERTICAL": tile_sheet.subsurface([250, 50, 50, 50]),
+    "WALL_CORNER1": tile_sheet.subsurface([250, 0, 50, 50]),
+    "WALL_CORNER2": tile_sheet.subsurface([350, 0, 50, 50]),
+    "WALL_CORNER3": tile_sheet.subsurface([350, 100, 50, 50]),
+    "WALL_CORNER4": tile_sheet.subsurface([250, 100, 50, 50]),
+    "GRASS": tile_sheet.subsurface([300, 50, 50, 50]),
+    "FLOOR": tile_sheet.subsurface([350, 150, 50, 50]),
+    "TILES": tile_sheet.subsurface([300, 150, 50, 50]),
+    "TABLE": tile_sheet.subsurface([100, 100, 50, 50]),
+
+    "BED1_PILLOW": tile_sheet.subsurface([100, 0, 50, 50]),
+    "BED1_MIDDLE": tile_sheet.subsurface([50, 0, 50, 50]),
+    "BED1_BOTTOM": tile_sheet.subsurface([0, 0, 50, 50]),
+
+    "BED2_PILLOW": tile_sheet.subsurface([100, 50, 50, 50]),
+    "BED2_MIDDLE": tile_sheet.subsurface([50, 50, 50, 50]),
+    "BED2_BOTTOM": tile_sheet.subsurface([0, 50, 50, 50]),
+
+    "BED3_PILLOW": tile_sheet.subsurface([150, 0, 50, 50]),
+    "BED3_MIDDLE": tile_sheet.subsurface([150, 50, 50, 50]),
+    "BED3_BOTTOM": tile_sheet.subsurface([150, 100, 50, 50]),
+
+    "BED4_PILLOW": tile_sheet.subsurface([200, 0, 50, 50]),
+    "BED4_MIDDLE": tile_sheet.subsurface([200, 50, 50, 50]),
+    "BED4_BOTTOM": tile_sheet.subsurface([200, 100, 50, 50]),
+
+
+}
+
 
 def read_map(map_data):
     map_list = []
@@ -119,29 +152,32 @@ def draw(s, cam_pos):
             if i != 0:
                 rectangle_list.append(rect)
 
-            if i == 1:
-                pygame.draw.rect(s, [0, 0, 0], rect)
+            if i == 0:
+                s.blit(tiles["FLOOR"], rect)
+
+            elif i == 1:
+                s.blit(tiles["WALL_HORIZONTAL"], rect)
 
             elif i == 2:
                 pygame.draw.rect(s, [255, 0, 0], rect)
 
             elif i == 3:
-                pygame.draw.rect(s, [200, 0, 0], rect)
+                s.blit(tiles["BED1_MIDDLE"], rect)
 
             elif i == 4:
-                pygame.draw.rect(s, [200, 200, 200], rect)
+                s.blit(tiles["BED1_PILLOW"], rect)
 
             elif i == 5:
-                pygame.draw.rect(s, [133,85,40], rect)
+                s.blit(tiles["TABLE"], rect)
 
             elif i == 6:
-                pygame.draw.rect(s, [255, 225, 40], rect)
+                s.blit(tiles["TILES"], rect)
 
             elif i == 7:
                 pygame.draw.rect(s, [255, 114, 0], rect)
 
             elif i == 8:
-                pygame.draw.rect(s, [0, 255, 0], rect)
+                s.blit(tiles["GRASS"], rect)
 
             elif i == 9:
                 pygame.draw.rect(s, [100, 100, 100], rect)
