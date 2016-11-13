@@ -17,8 +17,8 @@ class Player(Character):
         self.acc_x = 0
         self.acc_y = 0
 
-        self.max_acc = 0.2
-        self.max_speeed = 5
+        self.max_acc = 0.7
+        self.max_speeed = 9
 
         # self.player_icon_down = pygame.image.load("girl.down.png")
         # self.plyer.icon_up = pygame.image.load("girl.up.png")
@@ -39,40 +39,40 @@ class Player(Character):
 
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_UP or event.key == pygame.K_w:
-                # self.acc_y = -self.max_acc
+                self.acc_y = -self.max_acc
                 # self.icon = (self.player_icon_up)
                 self.y_speed = -5
 
             elif event.key == pygame.K_LEFT or event.key == pygame.K_a:
-                # self.acc_x = -self.max_acc
+                self.acc_x = -self.max_acc
                 # self.icon = self.player_icon_left
                 self.x_speed = -5
 
             elif event.key == pygame.K_RIGHT or event.key == pygame.K_d:
-                # self.acc_x = self.max_acc
+                self.acc_x = self.max_acc
                 # self.icon = self.player_icon_right
                 self.x_speed = 5
 
             elif event.key == pygame.K_DOWN or event.key == pygame.K_s:
-                # self.acc_y = self.max_acc
+                self.acc_y = self.max_acc
                 # self.icon = self.player_icon_down
                 self.y_speed = 5
 
         elif event.type == pygame.KEYUP:
             if event.key == pygame.K_UP or event.key == pygame.K_w:
-                # self.acc_y = 0
+                self.acc_y = 0
                 self.y_speed = 0
 
             elif event.key == pygame.K_DOWN or event.key == pygame.K_s:
-                # self.acc_y = 0
+                self.acc_y = 0
                 self.y_speed = 0
 
             elif event.key == pygame.K_LEFT or event.key == pygame.K_a:
-                # self.acc_x = 0
+                self.acc_x = 0
                 self.x_speed = 0
 
             elif event.key == pygame.K_RIGHT or event.key == pygame.K_d:
-                # self.acc_x = 0
+                self.acc_x = 0
                 self.x_speed = 0
 
     """if event.key == pygame.K_UP and pygame.K_RIGHT:
@@ -91,7 +91,7 @@ class Player(Character):
         bullet_list.append(Bullet(self.x, self.y, vel_x, vel_y))
 
     def update(self, rect_list):
-        """if abs(self.x_speed) < self.max_speeed:
+        if abs(self.x_speed) < self.max_speeed:
             self.x_speed += self.acc_x
 
         if abs(self.y_speed) < self.max_speeed:
@@ -103,10 +103,10 @@ class Player(Character):
 
         if self.y_speed != 0:
             if not self.collide(rect_list, 0, self.y_speed):
-                self.y += self.y_speed"""
+                self.y += self.y_speed
 
-        self.x += self.x_speed
-        self.y += self.y_speed
+        """self.x += self.x_speed
+        self.y += self.y_speed"""
         self.rect.x = self.x
         self.rect.y = self.y
 
