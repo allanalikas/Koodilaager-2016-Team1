@@ -4,23 +4,30 @@ import main
 
 
 def init():
-    global options, select
+    global options, select, buttonsound
     options = ["Play", "Credits", "Quit"]
     select = 0
 
+    pygame.mixer.music.set_volume(0.5)
+    menumusic = pygame.mixer.music.load("menusound.wav")
+    pygame.mixer.music.play(-1)
+    buttonsound = pygame.mixer.Sound("buttonsound.wav")
+
 
 def on_event(e):
-    global options, select
+    global options, select, buttonsound
 
     if e.type == pygame.KEYDOWN:
 
         if e.key == pygame.K_DOWN:
+            pygame.mixer.Sound.play(buttonsound)
             if select + 1 == len(options):
                 select = 0
             else:
                 select += 1
 
         if e.key == pygame.K_UP:
+            pygame.mixer.Sound.play(buttonsound)
             if select == 0:
                 select = len(options) - 1
             else:

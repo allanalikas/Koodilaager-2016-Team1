@@ -37,6 +37,16 @@ if __name__ == '__main__':
                 else:
                     current_state.on_event(event)
 
+                global pause
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_m:
+                        if not pause:
+                            pygame.mixer.music.pause()
+                            pause = True
+                        else:
+                            pygame.mixer.music.unpause()
+                            pause = False
+
             current_state.update()
             current_state.draw(screen)
 
