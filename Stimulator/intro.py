@@ -6,10 +6,13 @@ fade = 0
 fadeIn = True
 musicneed = True
 
+
 def init():
     global intropic
     intropic = pygame.image.load("intropic.png").convert()
     introsound = pygame.mixer.music.load("introsound.wav")
+    pygame.mouse.set_visible(False)
+
 
 def on_event(event):
     if event.type == pygame.KEYDOWN:
@@ -17,8 +20,10 @@ def on_event(event):
             pygame.mixer.music.stop()
             raise State_switcher('menu')
 
+
 def update():
     pass
+
 
 def draw(screen):
     global fade
@@ -40,7 +45,6 @@ def draw(screen):
 
     if fade == 255:
         fadeIn = False
-
 
     elif fade == 0 and not fadeIn:
         pygame.mixer.music.stop()

@@ -17,6 +17,7 @@ def init():
     enemy_obj = enemy.Enemy(300, 2020, enemy_icon)
     gamemusic = pygame.mixer.music.load("gamesound.wav")
     pygame.mixer.music.play(-1)
+    pygame.mouse.set_visible(True)
 
 def on_event(event):
     player_obj.on_event(event, bullet_list)
