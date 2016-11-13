@@ -104,13 +104,13 @@ def read_map(map_data):
 
 def return_values(map, x1, x2, y):
     if y < 0 or y >= len(map):
-        return [0 for i in range(x2-x1)]
+        return [-1 for i in range(x2-x1)]
 
     elif x1 < 0:
-        return [0 for i in range(0 - x1)] + map[y][:x2]
+        return [-1 for i in range(0 - x1)] + map[y][:x2]
 
     elif x2 >= len(map):
-        return map[y][x1:] + [0 for i in range(x2 - len(map) - 1)]
+        return map[y][x1:] + [-1 for i in range(x2 - len(map) - 1)]
 
     else:
         return map[y][x1:x2]

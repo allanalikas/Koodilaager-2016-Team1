@@ -45,7 +45,7 @@ def update():
 
 
 def draw(screen):
-    screen.fill((255, 255, 255))
+    screen.fill((0, 0, 0))
 
     map.draw(screen, cam_position)
     enemy_obj.draw(screen, cam_position)
