@@ -39,15 +39,6 @@ class Player(Character):
                self.acc_y = -self.max_acc
                self.icon = (self.player_icon_up)
 
-           if event.key == pygame.K_UP and pygame.K_RIGHT:
-               self.y_speed = -10
-               self.x_speed = 10
-
-           if event.key == pygame.K_UP and pygame.K_RIGHT:
-               self.acc_y = -self.max_acc
-               self.acc_x = self.max_acc
-               self.icon = (self.player_icon_up_right)
-
            elif event.key == pygame.K_LEFT or event.key == pygame.K_a:
                self.acc_x = -self.max_acc
                self.icon = (self.player_icon_left)
@@ -87,8 +78,8 @@ class Player(Character):
         h = math.sqrt((math.pow( -(screen_w/2 - mouse_pos[0]), 2 )) +
                       (math.pow( -(screen_h / 2 - mouse_pos[1]), 2)))
         print(h)
-        vel_x =( (-(screen_w/2 - mouse_pos[0])) / h ) * 3
-        vel_y = (-(screen_h/2 - mouse_pos[1])) / h * 3
+        vel_x = (-(screen_w/2 - mouse_pos[0])) / h
+        vel_y = (-(screen_h/2 - mouse_pos[1])) / h
         print(vel_x, vel_y)
         bullet_list.append(Bullet(self.x, self.y, vel_x, vel_y))
     def update(self, rect_list):
