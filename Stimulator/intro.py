@@ -1,5 +1,4 @@
 import pygame
-from main import *
 from constants import *
 
 fade = 0
@@ -7,11 +6,15 @@ fadeIn = True
 musicneed = True
 
 
-def init():
+def init(pause):
     global intropic
     intropic = pygame.image.load("intropic.png").convert()
     introsound = pygame.mixer.music.load("introsound.wav")
     pygame.mouse.set_visible(False)
+    if pause:
+        pygame.mixer.music.pause()
+    else:
+        pygame.mixer.music.unpause()
 
 
 def on_event(event):

@@ -3,7 +3,7 @@ from constants import *
 import main
 
 
-def init():
+def init(pause):
     global options, select, buttonsound
     options = ["Play", "Credits", "Quit"]
     select = 0
@@ -12,6 +12,10 @@ def init():
     menumusic = pygame.mixer.music.load("menusound.wav")
     pygame.mixer.music.play(-1)
     buttonsound = pygame.mixer.Sound("buttonsound.wav")
+    if pause:
+        pygame.mixer.music.pause()
+    else:
+        pygame.mixer.music.unpause()
 
 
 def on_event(e):
@@ -33,7 +37,7 @@ def on_event(e):
             else:
                 select -= 1
 
-        if e.key == pygame.K_RETURN:
+        if e.key == pygame.K_RETURN or pygame.K_SPACE:
             if select == 0:
                 raise State_switcher('ingame')
             if select == 2:

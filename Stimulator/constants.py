@@ -2,8 +2,6 @@ screen_w, screen_h = 800, 600
 fps = 60
 TILESIZE = 50
 
-pause = False
-
 # 0 - up, 1 - right, 2 - down, 3 - left
 player_dir = 0
 

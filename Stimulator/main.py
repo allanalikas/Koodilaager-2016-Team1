@@ -7,6 +7,7 @@ from pygame.locals import *
 
 current_state = ''
 
+pause = False
 
 def quit_game():
     pygame.quit()
@@ -14,10 +15,10 @@ def quit_game():
 
 
 def switch_state(new_state):
-    global current_state
+    global current_state, pause
 
     current_state = __import__(new_state)
-    current_state.init()
+    current_state.init(pause)
 
 if __name__ == '__main__':
 
@@ -29,6 +30,8 @@ if __name__ == '__main__':
     clock = pygame.time.Clock()
     ms = clock.tick(fps)
 
+    pause = False
+
     switch_state('intro')
 
     while True:
@@ -39,7 +42,6 @@ if __name__ == '__main__':
                 else:
                     current_state.on_event(event)
 
-                global pause
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_m:
                         if not pause:

@@ -9,14 +9,21 @@ cam_position = [0, 0]
 bullet_list = []
 
 
-def init():
+def init(pause):
     global player_obj, player_icon, enemy_icon, enemy_obj, bullet_obj
     enemy_icon = pygame.image.load("Kera.png")
     player_icon = pygame.image.load("player.png")
     player_obj = player.Player(100, 650)
     enemy_obj = enemy.Enemy(300, 1800, enemy_icon)
+
     gamemusic = pygame.mixer.music.load("gamesound.wav")
     pygame.mixer.music.play(-1)
+
+    print(pause)
+    if pause:
+        pygame.mixer.music.pause()
+    else:
+        pygame.mixer.music.unpause()
     pygame.mouse.set_visible(True)
 
 
