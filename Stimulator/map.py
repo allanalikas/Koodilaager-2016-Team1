@@ -18,7 +18,7 @@ ROHI/MURU = "R"
 AHI = "A"
 TREPI PILDI ASUKOHT = "3"
 """
-map1 = open("map_files/map2.data", "r")
+map1 = open("map_files/map1.data", "r")
 map1_width = int(map1.readline().strip())
 rectangle_list = []
 
