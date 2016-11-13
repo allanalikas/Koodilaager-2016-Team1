@@ -100,6 +100,12 @@ def read_map(map_data):
             elif letter == '3':
                 map_list[row].append(11)
 
+            elif letter == '4':
+                map_list[row].append(12)
+
+            elif letter == '/':
+                map_list[row].append(13)
+
 
         row += 1
 
@@ -191,5 +197,12 @@ def draw(s, cam_pos):
 
             elif i == 11:
                 s.blit(tiles["WALL_CORNER3"], rect)
+
+            elif i == 12:
+                s.blit(tiles["WALL_CORNER4"], rect)
+
+            elif i == 13:
+                s.blit(tiles["WALL_VERTICAL"], rect)
+
 
 
