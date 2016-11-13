@@ -1,7 +1,7 @@
 import pygame
 from constants import *
 from character import Character
-
+from bullet import *
 
 class Player(Character):
     def __init__(self, x, y):
@@ -29,7 +29,10 @@ class Player(Character):
         self.icon = self.player_icon_down
         self.rect = pygame.Rect([self.x, self.y, TILESIZE, TILESIZE])
 
-    def on_event(self, event):
+    def on_event(self, event, bullet_list):
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            self.shoot(event.pos, bullet_list)
+
         if event.type == pygame.KEYDOWN:
            if event.key == pygame.K_UP or event.key == pygame.K_w:
                self.acc_y = -self.max_acc
@@ -63,6 +66,12 @@ class Player(Character):
             elif event.key == pygame.K_RIGHT or event.key == pygame.K_d:
                 self.acc_x = 0
                 self.x_speed = 0
+
+    def shoot(self, mouse_pos, bullet_list):
+        vel_x = -(screen_w/2 - mouse_pos[0])
+        vel_y = -(screen_h/2 - mouse_pos[1])
+
+        bullet_list.append(Bullet(self.x, self.y, vel_x, vel_y))
 
     def update(self, rect_list):
         if abs(self.x_speed) < self.max_speeed:

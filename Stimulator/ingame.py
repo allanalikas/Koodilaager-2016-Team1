@@ -3,12 +3,13 @@ from constants import *
 import pygame
 import map
 import enemy
+from bullet import *
 
 cam_position = [0, 0]
-
+bullet_list = []
 
 def init():
-    global player_obj, player_icon, enemy_icon, enemy_obj
+    global player_obj, player_icon, enemy_icon, enemy_obj, bullet_obj
     enemy_icon = pygame.image.load("Kera.png")
     player_icon = pygame.image.load("player.png")
     player_obj = player.Player(100, 650)
@@ -30,7 +31,7 @@ def on_event(event):
                 pygame.mixer.music.unpause()
                 pause = False
 
-    player_obj.on_event(event)
+    player_obj.on_event(event, bullet_list)
 
 
 def update():
@@ -38,6 +39,9 @@ def update():
     enemy_obj.update(player_obj, map.map1_data)
     cam_position[0] = player_obj.x - screen_w/2 + player_obj.rect.w/2
     cam_position[1] = player_obj.y - screen_h/2 + player_obj.rect.h/2
+
+    for i in bullet_list:
+        i.update(map.get_rect_list())
     # print(cam_position, player_obj.x, player_obj.y)
 
 
@@ -47,3 +51,6 @@ def draw(screen):
     map.draw(screen, cam_position)
     enemy_obj.draw(screen, cam_position)
     player_obj.draw(screen, cam_position)
+
+    for i in bullet_list:
+        i.draw(screen, cam_position)
